@@ -11,23 +11,63 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 </head>
 <body>
+    <div class="header">
+        <div class="top-header">
+            <span class="logo">qaZar's site</span>
+        </div>
+    </div>
     <aside>
-        <span class="logo">qaZar's site</span>
         <h3 class="navigation">Навигация</h3>
         <ul>
-            <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i> Главная</li></a>
-            <a href="{% url 'relevance' %}"><li><i class="fa-solid fa-arrow-up"></i> Востребованность</li></a>
-            <a href="{% url 'geography' %}"><li><i class="fa-solid fa-earth-americas"></i> География</li></a>
-            <a href="{% url 'skills' %}"><li><i class="fa-solid fa-filter"></i> Навыки</li></a>
-            <a href="{% url 'recent' %}"><li><i class="fa-solid fa-envelope"></i> Вакансии</li></a>
+            <li>
+                <a href="{% url 'home' %}">
+                    <i class="fa-solid fa-house"></i>
+                    Главная
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'relevance' %}">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    Востребованность
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'geography' %}">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    География
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'skills' %}">
+                    <i class="fa-solid fa-filter"></i>
+                    Навыки
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'recent' %}">
+                    <i class="fa-solid fa-envelope"></i>
+                    Вакансии
+                </a>
+            </li>
         </ul>
     </aside>
     <main>
-        <div class="header">
-            <div class="top-header"></div>
-        </div>
         {% block content %}
         {% endblock %}
     </main>
+    <div class="footer">
+        <div class="about">
+            <div class="center">
+                <div class="first">
+                    <div class="student">Сайт разработал:</div>
+                    <div class="fio">Ефремов Артём Сергеевич</div>
+                </div>
+                <div class="second">
+                    <div class="group">Группа:</div>
+                    <div class="number">РИ-220943</div>
+                </div>
+            </div>   
+        </div>
+    </div>
 </body>
 </html>

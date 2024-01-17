@@ -1,49 +1,56 @@
+body {
+    margin: 0;
+}
+
 .top-header {
-    height: 6.25vh;
     width: 100%;
-    color: rgb(255, 0, 0); /* Или другие значения для red, green, blue */;
+    height: 12vh;
+    background: rgb(19, 81, 81);
+}
+
+.logo {
+    font-size: 64px;
+    font-family: Ingrid Darling;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 aside {
     float: left;
-    background: rgba(16.46, 66.94, 66.94, 0.87);
-    width: 20%;
-    padding: 2.5%;
+    background: rgb(19, 81, 81);
+    width: 15%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     height: 100vh;
-    margin-top: 2px;
-    margin-left: -8px;
     border-right: 2px solid black;
-}
-
-aside .logo {
-    font-size: 64px;
-    font-family: Ingrid Darling;
-    font-weight: 400px;
-    color: white;
-    position: relative;
-    padding-left: 15px;
 }
 
 aside .navigation{
     color:white;
-    margin-top: 50px;
     font-size: 28px;
-    padding-right: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 aside ul {
     list-style: none;
+    
 }
 
 aside ul li{
     color: white;
     display: block;
-    margin-top: 20px;
+    margin-top: 25px;
     transition: transform .6s ease;
+    transform: scale(1);
+    border-bottom: none;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
 }
 
 aside ul li:hover, aside ul a:hover{
-    color: green;
+    color: rgb(255, 225, 0);
     text-decoration: none;
     transform: scale(1.1);
 }
@@ -53,9 +60,88 @@ main {
     height: 100vh;
 }
 
-main .top-header {
-    width: 80%;
-    height: 10vh;
-    background: rgba(16.46, 66.94, 66.94, 0.87);
+a {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-start;
+    line-height: 18px;
+    min-height: 25px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
 
+i {
+    height: 16px;
+    margin-right: 5px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 16px;
+}
+
+.footer {
+    height: 20vh;
+    width: 100%;
+    background-color: #2E2E2E;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    color: white;
+}
+
+.about{
+    width: 50%;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.first{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-start;
+    line-height: 18px;
+    min-height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    list-style: none;
+}
+
+.student{
+    padding-right: 5%;
+}
+
+.second{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-start;
+    line-height: 18px;
+    min-height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    list-style: none;
+}
+
+.group{
+    padding: 5%;
 }
