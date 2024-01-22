@@ -8,10 +8,10 @@ def index(request):
     return render(request, 'main/index.html')
 
 def relevance(request):
-    return HttpResponse("<h4>Востребованность</h4>")
+    return render(request, 'main/geography.html')
 
 def geography(request):
-    return HttpResponse("<h4>География</h4>")
+    return render(request, 'main/geography.html')
 
 def skills(request):
     return HttpResponse("<h4>Навыки</h4>")

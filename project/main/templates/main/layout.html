@@ -5,68 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 </head>
 <body>
-    <div class="header">
-        <div class="top-header">
-            <span class="logo">qaZar's site</span>
-        </div>
-    </div>
-    <aside>
-        <h3 class="navigation">Навигация</h3>
-        <ul>
-            <li>
-                <a href="{% url 'home' %}">
-                    <i class="fa-solid fa-house"></i>
-                    Главная
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'relevance' %}">
-                    <i class="fa-solid fa-arrow-up"></i>
-                    Востребованность
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'geography' %}">
-                    <i class="fa-solid fa-earth-americas"></i>
-                    География
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'skills' %}">
-                    <i class="fa-solid fa-filter"></i>
-                    Навыки
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'recent' %}">
-                    <i class="fa-solid fa-envelope"></i>
-                    Вакансии
-                </a>
-            </li>
-        </ul>
-    </aside>
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
-    <div class="footer">
-        <div class="about">
-            <div class="center">
-                <div class="first">
-                    <div class="student">Сайт разработал:</div>
-                    <div class="fio">Ефремов Артём Сергеевич</div>
+    <div id="app">
+        <div data-1 class="container" id="container">
+            <div data-1 class="layout-container layout-container_menu">
+                <div data-1 class="layout-container_header">
+                    <header class="header">
+                        <span class="logo"></span>
+                    </header>
                 </div>
-                <div class="second">
-                    <div class="group">Группа:</div>
-                    <div class="number">РИ-220943</div>
+                <div data-1 class="layout-container_aside">
+                    <div class="main_menu">
+                        <div class="main_menu__logo">
+                            <img src="{% static 'main/image/logo.svg' %}" alt="logo" class="logo-svg">
+                            <span class="logo">qaZar's site</span>
+                        </div>
+                        <div class="main_menu__divider"></div>
+                        <div class="main_menu__navigation">
+                            <div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="{% url 'home' %}">
+                                        <i class="fa-solid fa-house"></i>
+                                        Главная
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'relevance' %}">
+                                        <i class="fa-solid fa-arrow-up"></i>
+                                        Востребованность
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'geography' %}">
+                                        <i class="fa-solid fa-earth-americas"></i>
+                                        География
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'skills' %}">
+                                        <i class="fa-solid fa-filter"></i>
+                                        Навыки
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'recent' %}">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        Вакансии
+                                    </a>
+                                </li>
+                            </ul>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="main_menu__footer">
+                            <div class="footer_divider"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>   
+                <div data-1 class="layout-container_content">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                <div data-1 class="layout-container_footer">
+                    <footer class="footer">
+                        <div class="info">
+                            <div class="first">
+                                <div class="student">Сайт разработал:</div>
+                                <div class="group">Группа:</div>
+                            </div>
+                            <div class="second">
+                                <div class="fio">Ефремов Артём Сергеевич</div>
+                                <div class="number">РИ-220943</div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
         </div>
     </div>
 </body>
