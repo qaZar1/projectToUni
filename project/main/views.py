@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
+from .models import Relevance, Geography, Skills
 # Create your views here.
 
 
@@ -8,13 +7,16 @@ def index(request):
     return render(request, 'main/index.html')
 
 def relevance(request):
-    return render(request, 'main/geography.html')
+    rel = Relevance.objects.all()
+    return render(request, 'main/relevance.html', {'relevance':rel})
 
 def geography(request):
-    return render(request, 'main/geography.html')
+    geo = Geography.objects.all()
+    return render(request, 'main/geography.html', {'geography':geo})
 
 def skills(request):
-    return HttpResponse("<h4>Навыки</h4>")
+    skill = Skills.objects.all()
+    return render(request, 'main/skills.html', {'skills':skill})
 
 def recentVacancies(request):
-    return HttpResponse("<h4>Последние вакансии</h4>")
+    return render(request, 'main/recent.html')

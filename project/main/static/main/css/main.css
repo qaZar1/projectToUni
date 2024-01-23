@@ -5,12 +5,12 @@ body {
 
 #app{
     width: 100vw;
-    height: auto;
+    height: 100vh;
     overflow: hidden;
 }
 
 .container{
-    height: auto;
+    height: 100vh;
 }
 
 .layout-container_menu{
@@ -28,7 +28,7 @@ body {
         "menu footer";
     grid-template-rows: auto 1fr;
     grid-template-columns: 300px auto;
-    height: auto;
+    height: 100%;
     transition: .5s all ease;
     position: relative;
 }
@@ -137,7 +137,7 @@ ul i{
 }
 
 ul li:hover, ul a:hover{
-    color: gray;
+    color: rgb(255, 230, 0);
     transform: scale(1.1);
 }
 
