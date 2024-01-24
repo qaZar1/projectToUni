@@ -5,6 +5,26 @@
 {% endblock %}
 
 {% block content %}
-    <div class="cont">
+    <div class="cont" style="font-family: 'Roboto Mono', monospace;">
+        {% for item in convertListHH %}
+            <div style="display: flex;
+            justify-content: center;">
+                <div style="width: 90%;
+                border: 1px solid black;
+                background-color: #f0f0f0;
+                margin: 2em;
+                border-radius: 20px;">
+                    <div style="margin: 1.2em;">
+                        <p>Название: {{ item.name|safe }}</p>
+                        <p>Описание: {{ item.responsibility|safe }}</p>
+                        <p>Навыки: {{ item.requirement|safe }}</p>
+                        <p>Компания: {{ item.employer_name|safe }}</p>
+                        <p>Оклад: {{ item.salary_from|safe }} {{ item.salary_currency }}</p>
+                        <p>Регион: {{ item.area_name|safe }}</p>
+                        <p>Дата публикации: {{ item.created_at|safe }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
