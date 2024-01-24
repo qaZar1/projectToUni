@@ -1,0 +1,27 @@
+version: "3"
+services:
+  django:
+    image: qazar1/mpc:latest
+    container_name: django
+    restart: always
+    volumes:
+      - ./data/main:/project/static/img
+    ports:
+      - 80:8000
+    networks:
+      - pg-network
+  
+  database:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_DB: python_test
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: test
+    volumes:
+      - ./data/postgres-data:/var/lib/postgresql/data
+    networks:
+      - pg-network
+
+networks:
+  pg-network:
